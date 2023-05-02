@@ -1,21 +1,11 @@
-#
-#
-# Author: Gustavo Oliveira
-# Purpose: Homework 3
-# Grouping things and making 1 and 3 dimension plots
-# File Name: oliveira_wk3hw.R
-#
 
-
-# Make 4 different plots that show different ways that we can see the 
-#  distribution of the total.sale column. 
-# Use the par() function to put all 4 plots in the same plot space. 
+### EDA ###
 
 library(plyr)
 #create color palette:
 library(RColorBrewer)
 coul = brewer.pal(9, "Reds") 
-HeartFailure.data <- data.frame(read.csv("/Users/Oliveiralgm/Downloads/MedicalData.csv", stringsAsFactors= FALSE))
+HeartFailure.data <- data.frame(read.csv("/Users/user_name/Downloads/MedicalData.csv", stringsAsFactors= FALSE))
 colnames(HeartFailure.data)
 hist(HeartFailure.data$Age[HeartFailure.data$Readmission..Any. == 'Yes'], breaks = 50, main = 'Age of readmissions', xlab = 'age', col = rev(coul))
 hist(HeartFailure.data$LOS[HeartFailure.data$Readmission..Any. == 'Yes'], breaks = 50, main = 'Length of Stay of readmitted patients', xlab = 'Length of Stay', col = rev(coul))
@@ -151,9 +141,9 @@ pie(na.omit(table.order2[order(-table.order2$yes),]$yes), main = 'Readmissions b
 
 
 
-data.cleveland <- HeartFailure.data[HeartFailure.data$Facility.Desc == "Cleveland ",]
-data.ServiceLine <- count(data.cleveland, "Service.Line")
-data.ServiceLineYes <- count(data.cleveland$Service.Line[data.cleveland$Readmission..Any. == 'Yes'])
+data.some_city <- HeartFailure.data[HeartFailure.data$Facility.Desc == "some_city ",]
+data.ServiceLine <- count(data.some_city, "Service.Line")
+data.ServiceLineYes <- count(data.some_city$Service.Line[data.cleveland$Readmission..Any. == 'Yes'])
 data.ServiceLine$yes <- data.ServiceLineYes$freq[match(data.ServiceLine$Service.Line,data.ServiceLineYes$x)]
 data.ServiceLine$percent <- (data.ServiceLine$yes/data.ServiceLine$freq)*100
 table.order <- data.ServiceLine[data.ServiceLine$freq > 100,]
@@ -161,8 +151,8 @@ table.order1 <- table.order[order(-table.order$percent),]
 barplot(table.order1$percent)
 barplot(table.order1[order(-table.order1$yes),]$yes)
 
-data.DRG <- count(data.cleveland, "Enc...Primary.ICD10.Diagnosis.Desc")
-data.DRGYes <- count(data.cleveland$Enc...Primary.ICD10.Diagnosis.Desc[data.cleveland$Readmission..Any. == 'Yes'])
+data.DRG <- count(data.some_city, "Enc...Primary.ICD10.Diagnosis.Desc")
+data.DRGYes <- count(data.some_city$Enc...Primary.ICD10.Diagnosis.Desc[data.some_city$Readmission..Any. == 'Yes'])
 data.DRG$yes <- data.DRGYes$freq[match(data.DRG$Enc...Primary.ICD10.Diagnosis.Desc,data.DRGYes$x)]
 data.DRG$percent <- (data.DRG$yes/data.DRG$freq)*100
 table.order <- data.DRG[data.DRG$freq > 100,]
