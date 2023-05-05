@@ -1,9 +1,22 @@
-#### Analyzed, built visualization, derived insights from resubmissions data from a major heart institute in the US to decide resources direction to reduce Medicare penalization. Library's use: plyr, RColorBrewer, treemap, wordcloud
+#### EDA and recommendedations to a major heart institute in the US to help decide resources direction to reduce Medicare resubmissions penalization. 
+ - Libraries use: 
+  ```
+    > plyr,
+    > RColorBrewer, 
+    > treemap, 
+    > wordcloud, 
+    > wordcloud2, 
+    > e1071 & caret (Naive Bayes Regression, Linear Regression) 
+   ```
 
-Understanding Heart Failure readmissions to reduce medicare penalties
+
+<h2> </h2>
+
+## More Details:
 
 This was a study made for a large heart failure institute in the US. 
 
-Medicare penalizes the hospital every time a patient is readmitted, so it is important to understand the nature of readmissions in order to direct resources in order to reduce it.
+Medicare penalizes hospitals every time a patient is readmitted, therefore it is important to understand the nature of readmissions in order to direct resources in order to reduce it.
 
-Analysis and Visualization were written in R.
+EDA and Visualization were written in R. 
+Built linear regressions and naive bayes to understand variable importance but not used.
