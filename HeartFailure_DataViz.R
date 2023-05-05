@@ -1,11 +1,8 @@
 #
 #
 # Author: Gustavo Oliveira
-# Purpose: Poster
-# Grouping things and making 1 and 3 dimension plots
-# File Name: oliveira_wk3hw.R
 #
-
+#
 
 
 library(plyr)
@@ -370,8 +367,6 @@ pie(aggregateFacDia$freq, labels = piepercent, main = 'Total', col = rev(coul))
 
 library(plotrix)
 library(wordcloud)
-
-
 
 all.tags <- HeartFailure.data$Enc...Primary.ICD10.Diagnosis.Desc.Simp
 tag.tab <- table(all.tags)
