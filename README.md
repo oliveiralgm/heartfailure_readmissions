@@ -1,13 +1,13 @@
  ``` 
  EDA and recommendedations to a major heart institute in the US to help decide resources direction to reduce Medicare resubmissions penalization. 
  
- - Libraries use:  
-    > plyr,
-    > RColorBrewer, 
-    > treemap, 
-    > wordcloud, 
-    > wordcloud2, 
-    > e1071 & caret (Naive Bayes Regression, Linear Regression) 
+ > Libraries use:  
+    - plyr,
+    - RColorBrewer, 
+    - treemap, 
+    - wordcloud, 
+    - wordcloud2, 
+    - e1071 & caret (Naive Bayes Regression, Linear Regression) 
    ```
 
 
