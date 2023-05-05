@@ -1,4 +1,4 @@
-#### Analyzed, built visualization, derived insights from resubmissions data from a major heart institute in the US to decide resources direction to reduce Medicare penalization.
+#### Analyzed, built visualization, derived insights from resubmissions data from a major heart institute in the US to decide resources direction to reduce Medicare penalization. Library's use: plyr, RColorBrewer, treemap, wordcloud
 
 Understanding Heart Failure readmissions to reduce medicare penalties
 
