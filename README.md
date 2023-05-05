@@ -1,4 +1,6 @@
-### Understanding Heart Failure readmissions to reduce medicare penalties
+#### Analyzed, built visualization, derived insights from resubmissions data from a major heart institute in the US to decide resources direction to reduce Medicare penalization.
+
+Understanding Heart Failure readmissions to reduce medicare penalties
 
 This was a study made for a large heart failure institute in the US. 
 
